@@ -2,7 +2,6 @@ import React from "react";
 import happy from "../assets/happy_cat.gif";
 
 function Accepted() {
-  console.log(process.env.REACT_APP_WHATSAPP_LINK);
   const sendMessage = () => {
     window.location.href = process.env.REACT_APP_WHATSAPP_LINK;
   };
@@ -37,4 +36,3 @@ function Accepted() {
 }
 
 export default Accepted;
-
