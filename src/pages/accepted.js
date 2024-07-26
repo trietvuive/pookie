@@ -3,7 +3,13 @@ import happy from "../assets/happy_cat.gif";
 
 function Accepted() {
   const sendMessage = () => {
-    window.location.href = process.env.REACT_APP_WHATSAPP_LINK;
+    let msg = process.env.REACT_APP_MSG
+    if (msg === undefined){
+      msg="";
+    }else{
+      msg = msg.replace(" ", "%20")
+    }
+    window.location.href = "https://wa.me/"+process.env.REACT_APP_WA_NO+"?text="+msg;
   };
 
   function createHeart() {
